@@ -19,6 +19,7 @@ public class HomeController {
 		User user = authService.getLoggedInUser();
 
 		model.addAttribute("user", user);
+		model.addAttribute("profile", user.getProfile());
 
 		return "home";
 	}
